@@ -1,20 +1,22 @@
 ﻿int A = 0;
 int B = 0;
+int C = 0;
+int maxnumber = 0;
 
 Console.WriteLine("Введите число А");
 A = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B");
 B = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число C");
+C = Convert.ToInt32(Console.ReadLine());
+maxnumber = A;
 
-if (A > B)
+if (B > maxnumber)
 {
-    Console.WriteLine(" максимальное число = " +A );
+    maxnumber = B;
 }
-if (A < B)
+if (C > maxnumber)
 {
-    Console.WriteLine("B - максимальное число = " +B );
+    maxnumber = C;
 }
-if (A == B)
-{
-    Console.WriteLine("числа равны друг другу");
-}
+Console.WriteLine("max = " +maxnumber);
