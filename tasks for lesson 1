@@ -1,0 +1,90 @@
+#Task2
+
+int A = 0;
+int B = 0;
+
+Console.WriteLine("Введите число А");
+A = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число B");
+B = Convert.ToInt32(Console.ReadLine());
+
+if (A > B)
+{
+    Console.WriteLine(" максимальное число = " +A );
+}
+if (A < B)
+{
+    Console.WriteLine("B - максимальное число = " +B );
+}
+if (A == B)
+{
+    Console.WriteLine("числа равны друг другу");
+}
+
+
+
+
+
+#Task4
+
+
+int A = 0;
+int B = 0;
+int C = 0;
+int maxnumber = 0;
+
+Console.WriteLine("Введите число А");
+A = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число B");
+B = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число C");
+C = Convert.ToInt32(Console.ReadLine());
+maxnumber = A;
+
+if (B > maxnumber)
+{
+    maxnumber = B;
+}
+if (C > maxnumber)
+{
+    maxnumber = C;
+}
+Console.WriteLine("max = " +maxnumber);
+
+
+
+#Task6
+
+
+int A = 0;
+
+Console.WriteLine("Введите число");
+A = Convert.ToInt32(Console.ReadLine());
+
+if (A % 2 == 0)
+{
+    Console.WriteLine("число четное");
+}
+
+else 
+{
+    Console.WriteLine("число не является четным");
+}
+
+
+#Task8
+
+
+int n = 0;
+int i = 2;
+Console.WriteLine("Введите число");
+n = Convert.ToInt32(Console.ReadLine());
+while (i <= n)
+{
+    if (i % 2 == 0)
+    {
+        Console.Write(i + ",");
+        
+    }
+    i++;
+}
