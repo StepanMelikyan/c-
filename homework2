@@ -1,0 +1,53 @@
+// task10
+
+Console.WriteLine("Ввкедите число: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(n1 % 100 / 10);
+
+// Task13
+
+Console.WriteLine("Ввкедите число: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+int lenthn1 = 0;
+int number = n1 / 10;
+while (number!= 0)
+{
+    number /= 10;
+    lenthn1++;
+}
+
+if (n1 < 100)
+{
+    Console.WriteLine("нет третьей цифры");
+}
+if (100 < n1 & n1 < 999)
+{
+    Console.WriteLine(n1 % 10);
+}
+else
+
+
+{
+    Console.WriteLine((n1 / (int)Math.Pow(10, lenthn1 -2)) % 10);
+}
+
+// Task15
+Console.WriteLine("Введите день недели числом: ");
+int n1 = Convert.ToInt32(Console.ReadLine());
+
+if (n1 == 6 || n1 == 7)
+{
+    Console.WriteLine("выходной");
+}
+if (n1 < 1)
+{
+    Console.WriteLine("подумайте еще раз");
+}
+if (n1 > 7)
+{
+    Console.WriteLine("подумайте еще раз");
+}
+else 
+{
+    Console.WriteLine("работать");
+}
