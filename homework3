@@ -1,0 +1,69 @@
+// Task 19
+
+Console.WriteLine("Введите пятизначное число");
+int x = Convert.ToInt32(Console.ReadLine());
+int m1 = 0;
+int m2 = 0;
+int m4 = 0;
+int m5 = 0;
+if (x < 99999 & x > 9999)
+{
+    m5 = x % 10;
+    m4 = x % 100 / 10;
+    m1 = x / 10000;
+    m2 = x / 1000 % 10;
+    if (m1 == m5 & m2 == m4)
+    {
+        Console.WriteLine("Палиндром");
+    }
+    else
+    {
+        Console.WriteLine("не палиндром");
+    }
+
+}
+else
+{
+    Console.WriteLine("Ты пьян");
+}
+
+// Task 21
+
+Console.WriteLine("Введите координату AX");
+int ax = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату AY");
+int ay = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату AZ");
+int az = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату BX");
+int bx = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату BY");
+int by = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату BZ");
+int bz = Convert.ToInt32(Console.ReadLine());
+double d = Math.Sqrt(Math.Pow(bx - ax, 2) + Math.Pow(by - ay, 2) + Math.Pow(bz - az, 2));
+Console.WriteLine("расстояние равно: " + d);
+
+
+
+
+// Task 23
+
+
+Console.WriteLine("Введите натуральное число");
+int x = Convert.ToInt32(Console.ReadLine());
+int a = Math.Abs(x);
+int i = 1;
+while (i <= a)
+{
+    if (x < 0)
+    {
+        Console.Write(-i * i * i);
+    }
+    if (x > 0)
+    {
+        Console.Write(i * i * i);
+    }
+    Console.Write(", ");
+    i++;
+}
