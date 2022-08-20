@@ -1,0 +1,71 @@
+TASK25
+
+Console.WriteLine("введите число А");
+int n1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число B");
+int n2 = Convert.ToInt32(Console.ReadLine());
+int i = 1; 
+int n3 = n1;
+while (i < n2)
+{
+    n1 = n1 * n3;
+    i++;
+}
+Console.WriteLine(n1);
+
+
+task27
+
+Console.WriteLine("введите число ");
+int n = Convert.ToInt32(Console.ReadLine());
+string m = n.ToString();
+int length =  m.Length;
+int [] array = new int[length];
+int i = 0;
+Console.WriteLine(m[0]);
+Console.WriteLine(int.Parse(m[0]));
+
+while (i < length)
+{
+    Console.WriteLine($"{m[i]}первый");
+    array[i] = Convert.ToInt32(m[i]);
+    i++;
+}
+Console.WriteLine(m[0]);
+for(int k=0; k < m.Length; k++)
+{
+Console.WriteLine($"{Convert.ToInt32(array[k])} second");
+}
+int sum = 0;
+for (int j = 0; j < m.Length; j++)
+{
+    sum += Convert.ToInt32(array[j]);
+}
+Console.WriteLine(Convert.ToInt32(sum));
+
+
+
+task29
+
+
+void FillArray (int [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        arr [i] = new Random().Next (1,10);
+    }
+}
+int [] array = new int [8];
+
+void PrintArray (int [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        Console.Write($"{arr [i]} ");
+    }
+}
+
+FillArray(array);
+PrintArray(array);
