@@ -1,0 +1,51 @@
+void FillArray (double [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        arr [i] = new Random().Next (1,100);
+    }
+}
+void PrintArray (double [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
+}
+
+
+double [] array = new double [20];
+FillArray(array);
+PrintArray(array);
+Console.WriteLine();
+double max = 0;
+void Max (double [] arr)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+        {
+        max = array[i];
+        }
+    }
+}
+Max(array);
+Console.WriteLine($"максимальное число = {max}");
+
+double min = max;
+void Min (double [] arr)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+        min = array[i];
+        }
+    }
+}
+Min(array);
+Console.WriteLine($"минимальное число = {min}");
+double dif = max - min;
+Console.WriteLine($"разница между максимальным и минимальным числом = {dif}");

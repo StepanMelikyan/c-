@@ -1,0 +1,40 @@
+void FillArray (int [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        arr [i] = new Random().Next (1,10);
+    }
+}
+void PrintArray (int [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
+}
+
+
+int [] array = new int [10];
+FillArray(array);
+PrintArray(array);
+Console.WriteLine();
+
+int sum1 = 0;
+int sum2 = 0;
+for (int i = 0; i < array.Length; i++)
+{
+    if (i % 2 == 0)
+    {
+        sum1 = sum1 + array[i];
+    }
+     if (i % 2 != 0)
+    {
+        sum2 = sum2 + array[i];
+    }
+
+}
+
+Console.WriteLine($"сумма числен на нечетных позициях = {sum1}");
+Console.WriteLine($"сумма чисел на четных позициях = {sum2}");
