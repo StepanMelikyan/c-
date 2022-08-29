@@ -1,0 +1,33 @@
+Console.WriteLine("сколько чисел хотите ввести?");
+int n = Convert.ToInt32(Console.ReadLine());
+int [] array = new int [n];
+
+for (int i = 1; i < n + 1; i++)
+{
+    Console.WriteLine("введите число: ");
+    int x = Convert.ToInt32(Console.ReadLine());
+    array[i - 1] = x;
+    
+}
+
+void PrintArray (int [] arr)
+{
+    int length = arr.Length;
+    for (int i = 0; i < length; i++)
+    {
+        Console.Write($"{arr[i]}, ");
+    }
+}
+PrintArray(array);
+Console.WriteLine();
+int count = 0;
+for (int j = 0; j < array.Length; j++)
+{
+    
+    if (array[j] > 0) 
+    {
+        count++;
+    }
+
+}
+Console.WriteLine($"Вы ввели {count} положительных числа");
