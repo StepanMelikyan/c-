@@ -1,0 +1,36 @@
+// task 52
+
+Console.WriteLine("Введите высоту массива");
+ int m = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Введите ширину массива");
+ int n = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[m, n];
+Random random = new Random();
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        array[i, j] = random.Next(1, 10);
+        Console.Write($"|{array[i, j]}");
+    }
+    Console.WriteLine();
+}
+
+
+for (int j = 0; j < array.GetLength(1); j++)
+{
+    int sum = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        
+        sum = sum + array[i, j];
+        
+
+    }
+    Console.WriteLine($"сумма чисел столца номер {j + 1} = {sum}");
+    int mid1 = sum / array.GetLength(0);
+    int mid2 = (sum % array.GetLength(0)) * 10 / array.GetLength(0);
+    Console.WriteLine($"среднее арифметическое чисел столбца номер {j + 1} = {mid1},{mid2}");
+    
+    
+}
